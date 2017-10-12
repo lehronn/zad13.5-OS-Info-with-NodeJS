@@ -8,13 +8,13 @@ function getOSinfo() {
   var CPU = os.cpus()[0].model;
   var uptime = os.uptime();
   var userInfo = os.userInfo();
-  
+
   if(type === 'Darwin') {
     type = 'OSX';
-  } 
-      else if(type === 'Windows_NT') {
-        type = 'Windows';
-      }
+  }
+    else if(type === 'Windows_NT') {
+      type = 'Windows';
+    }
   console.log('\nSystem:'.green , type);
   console.log('Release:'.red , release);
   console.log('CPU: '.yellow + CPU);
@@ -22,8 +22,9 @@ function getOSinfo() {
   console.log('Home dir:'.magenta , userInfo.homedir);
   console.log('====\nUptime:'.cyan );
   timeFormat.print(uptime);
-  
+
   //console.log('====\nUptime:', timeFormat.print(uptime));
 }
 
 exports.print = getOSinfo;
+//exports.print = uptime;
