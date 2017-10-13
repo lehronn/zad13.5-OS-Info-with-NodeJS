@@ -20,11 +20,6 @@ function getOSinfo() {
   console.log('CPU: '.yellow + CPU);
   console.log('User name:'.blue , userInfo.username);
   console.log('Home dir:'.magenta , userInfo.homedir);
-  console.log('====\nUptime:'.cyan );
-  timeFormat.print(uptime);
-
-  //console.log('====\nUptime:', timeFormat.print(uptime));
+  console.log('Uptime:'.cyan, timeFormat.sth(uptime));
 }
-
-exports.print = getOSinfo;
-//exports.print = uptime;
+exports.getOSinfo = getOSinfo;
